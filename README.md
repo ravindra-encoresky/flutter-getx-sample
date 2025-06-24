@@ -1,16 +1,29 @@
-# flutter_getx
+# Flutter GetX Sample Project
 
-A new Flutter project.
+This project demonstrates a simple Todo app built with Flutter using the [GetX](https://pub.dev/packages/get) package for state management, navigation, and dependency injection.
 
-## Getting Started
+## Features
+- Add, remove, and toggle todos
+- View todo details
+- GetX state management
+- GetX navigation and dependency injection
 
-This project is a starting point for a Flutter application.
+## Folder Structure
+```
+lib/
+├── bindings/
+│   └── todo_binding.dart
+├── controllers/
+│   └── todo_controller.dart
+├── models/
+│   └── todo.dart
+├── views/
+│   ├── home_view.dart
+│   └── detail_view.dart
+├── main.dart
+```
 
-A few resources to get you started if this is your first Flutter project:
+## About GetX
+GetX is an extra-light and powerful solution for Flutter that combines high-performance state management, intelligent dependency injection, and route management quickly and practically.
 
-- [Lab: Write your first Flutter app](https://docs.flutter.dev/get-started/codelab)
-- [Cookbook: Useful Flutter samples](https://docs.flutter.dev/cookbook)
-
-For help getting started with Flutter development, view the
-[online documentation](https://docs.flutter.dev/), which offers tutorials,
-samples, guidance on mobile development, and a full API reference.
+For more information, see the [GetX documentation](https://pub.dev/packages/get).
