@@ -1,7 +1,7 @@
 import 'package:flutter/material.dart';
+import 'package:flutter_getx/controllers/todo_controller.dart';
+import 'package:flutter_getx/views/detail/detail_view.dart';
 import 'package:get/get.dart';
-import '../controllers/todo_controller.dart';
-import 'detail_view.dart';
 
 class HomeView extends StatelessWidget {
   final TodoController controller = Get.find();

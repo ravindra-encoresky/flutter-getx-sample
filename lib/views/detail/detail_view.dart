@@ -1,6 +1,6 @@
 import 'package:flutter/material.dart';
+import 'package:flutter_getx/controllers/todo_controller.dart';
 import 'package:get/get.dart';
-import '../controllers/todo_controller.dart';
 
 class DetailView extends StatefulWidget {
   final int index;
@@ -55,13 +55,6 @@ class _DetailViewState extends State<DetailView> {
           icon: const Icon(Icons.arrow_back_rounded),
           onPressed: () => Get.back(),
         ),
-        actions: [
-          IconButton(
-            icon: const Icon(Icons.save_rounded),
-            tooltip: 'Save',
-            onPressed: _save,
-          ),
-        ],
       ),
       body: Obx(() {
         final todo = controller.todos[widget.index];

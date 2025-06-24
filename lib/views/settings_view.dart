@@ -1,17 +1,9 @@
 import 'package:flutter/material.dart';
 import 'package:get/get.dart';
-
-class SettingsController extends GetxController {
-  var themeMode = ThemeMode.system.obs;
-
-  void setThemeMode(ThemeMode mode) {
-    themeMode.value = mode;
-    Get.changeThemeMode(mode);
-  }
-}
+import '../controllers/settings_controller.dart';
 
 class SettingsView extends StatelessWidget {
-  final SettingsController controller = Get.put(SettingsController());
+  final SettingsController controller = Get.find<SettingsController>();
 
   SettingsView({super.key});
 
@@ -47,6 +39,7 @@ class SettingsView extends StatelessWidget {
                       }
                     },
                   ),
+                  title: const Text('Theme'),
                 )),
           ],
         ),

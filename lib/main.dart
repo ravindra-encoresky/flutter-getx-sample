@@ -1,9 +1,10 @@
 import 'package:flutter/material.dart';
 import 'package:get/get.dart';
 import 'bindings/todo_binding.dart';
-import 'views/home_view.dart';
-import 'views/detail_view.dart';
+import 'views/home/home_view.dart';
+import 'views/detail/detail_view.dart';
 import 'views/settings_view.dart';
+import 'controllers/settings_controller.dart';
 
 void main() {
   runApp(const MyApp());
