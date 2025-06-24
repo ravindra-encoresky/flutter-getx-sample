@@ -24,22 +24,21 @@ class SettingsView extends StatelessWidget {
           crossAxisAlignment: CrossAxisAlignment.start,
           children: [
             Text('Appearance', style: theme.textTheme.titleLarge?.copyWith(fontWeight: FontWeight.bold)),
-            const SizedBox(height: 16),
-            Obx(() => ListTile(
-                  leading: SegmentedButton<ThemeMode>(
-                    segments: const [
-                      ButtonSegment(value: ThemeMode.light, label: Text('Light')),
-                      ButtonSegment(value: ThemeMode.dark, label: Text('Dark')),
-                      ButtonSegment(value: ThemeMode.system, label: Text('System')),
-                    ],
-                    selected: <ThemeMode>{controller.themeMode.value},
-                    onSelectionChanged: (modes) {
-                      if (modes.isNotEmpty) {
-                        controller.setThemeMode(modes.first);
-                      }
-                    },
-                  ),
-                  title: const Text('Theme'),
+            const SizedBox(height: 24),
+            Text('Theme', style: theme.textTheme.titleMedium),
+            const SizedBox(height: 12),
+            Obx(() => SegmentedButton<ThemeMode>(
+                  segments: const [
+                    ButtonSegment(value: ThemeMode.light, label: Text('Light')),
+                    ButtonSegment(value: ThemeMode.dark, label: Text('Dark')),
+                    ButtonSegment(value: ThemeMode.system, label: Text('System')),
+                  ],
+                  selected: <ThemeMode>{controller.themeMode.value},
+                  onSelectionChanged: (modes) {
+                    if (modes.isNotEmpty) {
+                      controller.setThemeMode(modes.first);
+                    }
+                  },
                 )),
           ],
         ),
